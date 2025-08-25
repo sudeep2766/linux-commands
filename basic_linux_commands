@@ -1,0 +1,106 @@
+Lists the files and directories
+flash@ubuntu:~$ ls
+Desktop  Documents  Downloads  Music  Public  Screenshots  Templates  Videos
+
+Lists all files including hidden ones
+flash@ubuntu:~$ ls -la
+total 52
+drwxr-x--- 10 flash flash 4096 Aug 25 10:01 .
+drwxr-xr-x  4 root  root  4096 Aug 25 09:59 ..
+-rw-r--r--  1 flash flash  220 Aug 25 09:59 .bash_logout
+-rw-r--r--  1 flash flash 3771 Aug 25 09:59 .bashrc
+drwxrwxr-x  2 flash flash 4096 Aug 25 10:00 Desktop
+drwxrwxr-x  2 flash flash 4096 Aug 25 10:01 Documents
+drwxrwxr-x  2 flash flash 4096 Aug 25 10:00 Downloads
+drwxrwxr-x  2 flash flash 4096 Aug 25 10:01 Music
+-rw-r--r--  1 flash flash  807 Aug 25 09:59 .profile
+drwxrwxr-x  2 flash flash 4096 Aug 25 10:01 Public
+drwxrwxr-x  2 flash flash 4096 Aug 25 10:01 Screenshots
+drwxrwxr-x  2 flash flash 4096 Aug 25 10:01 Templates
+drwxrwxr-x  2 flash flash 4096 Aug 25 10:01 Videos
+
+Shows the manual of the command on how to use it
+flash@ubuntu:~$ man ls
+
+
+flash@ubuntu:~$ tree
+Command 'tree' not found, but can be installed with:
+snap install tree  # version 2.1.3+pkg-5852, or
+apt  install tree  # version 2.1.1-2
+See 'snap info tree' for additional versions.
+flash@ubuntu:~$ apt install tree
+E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?
+flash@ubuntu:~$ sudo apt install tree
+[sudo] password for flash: 
+flash is not in the sudoers file.
+
+
+flash@ubuntu:~$ tree
+.
+├── Desktop
+├── Documents
+├── Downloads
+├── Music
+├── Public
+├── Screenshots
+├── Templates
+└── Videos
+
+9 directories, 0 files
+
+
+flash@ubuntu:~$ ifconfig
+Command 'ifconfig' not found, but can be installed with:
+apt install net-tools
+Please ask your administrator.
+
+
+flash@ubuntu:~$ ipconfig
+Command 'ipconfig' not found, did you mean:
+  command 'iwconfig' from deb wireless-tools (30~pre9-13.1ubuntu4)
+  command 'hipconfig' from deb hipcc (5.2.3-12)
+  command 'ifconfig' from deb net-tools (2.10-0.1ubuntu3)
+  command 'iconfig' from deb ipmiutil (3.1.9-3)
+Try: apt install <deb name>
+
+To see the ip address
+flash@ubuntu:~$ ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: enp0s31f6: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 4c:d7:17:8c:ae:f8 brd ff:ff:ff:ff:ff:ff
+    inet 10.1.69.195/20 brd 10.1.79.255 scope global dynamic noprefixroute enp0s31f6
+       valid_lft 428252sec preferred_lft 428252sec
+3: wlp0s20f3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether 18:93:41:68:c8:ba brd ff:ff:ff:ff:ff:ff
+    inet 10.42.0.1/24 brd 10.42.0.255 scope global noprefixroute wlp0s20f3
+       valid_lft forever preferred_lft forever
+    inet6 fe80::827c:6131:40ef:a961/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+
+ping a website or webserver to see if its working
+flash@ubuntu:~$ ping google.com
+PING google.com (142.250.67.46) 56(84) bytes of data.
+64 bytes from maa05s12-in-f14.1e100.net (142.250.67.46): icmp_seq=1 ttl=117 time=8.41 ms
+64 bytes from maa05s12-in-f14.1e100.net (142.250.67.46): icmp_seq=2 ttl=117 time=8.42 ms
+64 bytes from maa05s12-in-f14.1e100.net (142.250.67.46): icmp_seq=3 ttl=117 time=9.04 ms
+64 bytes from maa05s12-in-f14.1e100.net (142.250.67.46): icmp_seq=4 ttl=117 time=8.42 ms
+64 bytes from maa05s12-in-f14.1e100.net (142.250.67.46): icmp_seq=5 ttl=117 time=8.52 ms
+64 bytes from maa05s12-in-f14.1e100.net (142.250.67.46): icmp_seq=6 ttl=117 time=8.42 ms
+64 bytes from maa05s12-in-f14.1e100.net (142.250.67.46): icmp_seq=7 ttl=117 time=8.39 ms
+64 bytes from maa05s12-in-f14.1e100.net (142.250.67.46): icmp_seq=8 ttl=117 time=8.41 ms
+^C
+--- google.com ping statistics ---
+8 packets transmitted, 8 received, 0% packet loss, time 7009ms
+rtt min/avg/max/mdev = 8.385/8.502/9.039/0.206 ms
+
+Create a file named files
+flash@ubuntu:~$ mkdir files
+flash@ubuntu:~$ ls
+Desktop  Documents  Downloads  files  Music  Public  Screenshots  Templates  Videos
+flash@ubuntu:~$
